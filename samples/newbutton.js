@@ -5,8 +5,10 @@ function newLevel(){
 	var WRAP_CONTENT=android.widget.LinearLayout.LayoutParams.WRAP_CONTENT;
 
 	MCViews.runOnUiThread(function(){
-		var text=MCViews.createText("HelloWorld");
-		var window=new PopupWindow(text,WRAP_CONTENT,WRAP_CONTENT);
+		var button=MCViews.createNewButton("sample",{onClick:function(){
+				clientMessage("Hello World");
+		}});
+		var window=new PopupWindow(button,WRAP_CONTENT,WRAP_CONTENT);
 		window.showAtLocation(MCViews.activity().getWindow().getDecorView(),Gravity.CENTER,0,0);
 	});
 }
