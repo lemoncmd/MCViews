@@ -8,7 +8,7 @@ function newLevel(){
 		var button=MCViews.createBackground("sample",{onClick:function(){
 			window.dismiss();
 		}});
-		var window=new PopupWindow(button,WRAP_CONTENT,WRAP_CONTENT);
+		var window=new PopupWindow(button,MCViews.ScreenSize.width,MCViews.ScreenSize.height);
 		window.showAtLocation(MCViews.activity().getWindow().getDecorView(),Gravity.CENTER,0,0);
 	});
 }
